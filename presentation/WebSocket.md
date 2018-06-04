@@ -12,7 +12,7 @@
 
 - Web 导航应用中的地理位置获取
 
-📝 场景：分析具体场景对应的不足
+📝 场景：分析具体场景对应的不足
 
 补充：后端处理时间很长的情况
 
@@ -24,13 +24,13 @@
 
 - ***服务端无法主动推送信息***
 
-📝 核心：http 协议的被动性
+📝 核心：http 协议的被动性
 
 👇
 
 ### WebSocket 前的解决方案
 
-- Adobe®️ Flash®️ Socket
+- Adobe®️ Flash®️ Socket
 - AJAX long polling
 - AJAX multipart streaming
 - Forever Iframe
@@ -143,11 +143,11 @@ Socket.IO 降级方案
 ![api-method](./img/api-method.png)
 <!-- .element: style="width: 80%" -->
 
-📝 2 个实例方法
+📝 2 个实例方法
 
 - send 方法将需要发送的数据加入到发送队列，同时增加 bufferedAmount 的数值。
   - *INVALID_STATE_ERR* 连接的 readyState 当前不是 OPEN
-- close 方法会关闭 WebSocket 连接，如果连接状态已经 CLOSED, 方法不过任何事
+- close 方法会关闭 WebSocket 连接，如果连接状态已经 CLOSED, 方法不过任何事
   - *INVALID_ACCESS_ERR* 无效的code
   - *SYNTAX_ERR* reason 太长
 
@@ -156,12 +156,12 @@ Socket.IO 降级方案
 ![api-eventListener](./img/api-eventListener.png)
 <!-- .element: style="width: 80%" -->
 
-📝 4 种监听事件
+📝 4 种监听事件
 
 其中 MessageEvent 和 CloseEvent 比较特殊：
 
-- MessageEvent 和 Window.postMessage() and Window.onmessage 中的一致，有 data(主要数据部分), origin, source, port 等连接信息
-- CloseEvent 是 WebSocket 独有，有 code, reason 等属性。其中 code 根据规范预定义了一部分，可以自定义 4000-4999 部分 code 含义。
+- MessageEvent 和 Window.postMessage() and Window.onmessage 中的一致，有 data(主要数据部分), origin, source, port 等连接信息
+- CloseEvent 是 WebSocket 独有，有 code, reason 等属性。其中 code 根据规范预定义了一部分，可以自定义 4000-4999 部分 code 含义。
 
 👉
 
@@ -235,7 +235,7 @@ Sec-WebSocket-Version: 13
   <li><p>Sec-WebSocket-Version: 使用的 WebSocket 协议版本 (13)</p></li>
 </ul>
 
-📝 可以看出 WebSocket 握手其实是一个 HTTP 请求，在请求中要求升级成 WebSocket 协议。正是因为是一个 HTTP 请求，可以携带任意 HTTP 头，包括 Cookie，于是可以在握手阶段通过请求头进行安全限制、权限检查等。
+📝 可以看出 WebSocket 握手其实是一个 HTTP 请求，在请求中要求升级成 WebSocket 协议。正是因为是一个 HTTP 请求，可以携带任意 HTTP 头，包括 Cookie，于是可以在握手阶段通过请求头进行安全限制、权限检查等。
 
 👇
 
@@ -250,7 +250,7 @@ Sec-WebSocket-Protocol: chat
 ```
 
 <ul style="font-size: 0.8em">
-  <li><p>Status: *101* 表示握手成功，非 *101* 则握手失败</p></li>
+  <li><p>Status: *101* 表示握手成功，非 *101* 则握手失败</p></li>
   <li><p>Upgrade, Connection: 同客户端</p></li>
   <li><p>Sec-WebSocket-Protocol: 同客户端</p></li>
   <li><p>Sec-WebSocket-Accept: 对 key 的加密，标示是否接收连接</p></li>
@@ -328,7 +328,7 @@ opcode：4 bit。表示被传输帧的类型
 📝
 - 内容帧
   - 延续帧：为一条消息的延续帧，非第一帧
-  - text帧，binary帧：消息的第一帧，标示帧消息的格式
+  - text帧，binary帧：消息的第一帧，标示帧消息的格式
 - 控制帧
   - close
   - ping，pong：连接保持+心跳（虽然长时间没有数据往来，但仍需要保持连接），目前浏览器没有开放接口
@@ -355,8 +355,8 @@ Server: (process complete message) Happy new year to you too!
 ## WebSocket 不足之处
 
 - 开发要求高，要求代码具有更高的稳定性。
-- 传输的信息比较原始，需要自己定义传输协议（eg. json, STOMP）。
-- WebSocket 比较新，生态不是非常完善。（eg. 数据压缩gzip）
+- 传输的信息比较原始，需要自己定义传输协议（eg. json, STOMP）。
+- WebSocket 比较新，生态不是非常完善。（eg. 数据压缩gzip）
 
 📝
 WebSocket 的协议中预留了很多可以扩展的地方，例如负责制定 WebSocket 规范的HyBi Working Group进行的两项扩展：多路复用扩展，压缩扩展。
