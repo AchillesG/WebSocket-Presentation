@@ -72,7 +72,7 @@ Socket.IO 降级方案
 
 ## WebSocket 的特点
 
-![全双工通信(full-duplex)](./img/full-duplex.png "全双工通信(full-duplex)")
+![全双工通信(full-duplex)](../img/full-duplex.png "全双工通信(full-duplex)")
 <!-- .element: style="width:80%; background-color: #ddd; border: 4px solid #fff;" -->
 <small>全双工通信 (full-duplex)</small>
 
@@ -98,7 +98,7 @@ Socket.IO 降级方案
 
 👇
 
-[![overTCP](./img/overTCP.jpg)](#/3/1)
+[![overTCP](../img/overTCP.jpg)](#/3/1)
 
 👉
 
@@ -121,14 +121,14 @@ Socket.IO 降级方案
 [SockJS](https://github.com/sockjs/sockjs-client#supported-transports-by-browser-html-served-from-http-or-https),
 [Can I use](https://caniuse.com/#feat=websockets)
 
-![api-interface](./img/api-interface.png)
+![api-interface](../img/api-interface.png)
 <!-- .element: style="margin-top: -50px;" -->
 
 📝 interface: WebSocket 是与服务端连接的主接口，连接后也通过它进行数据的发送接收
 
 👇
 
-![api-property](./img/api-property.png)
+![api-property](../img/api-property.png)
 
 📝 WebSocket 实例的部分属性
 
@@ -140,7 +140,7 @@ Socket.IO 降级方案
 
 👇
 
-![api-method](./img/api-method.png)
+![api-method](../img/api-method.png)
 <!-- .element: style="width: 80%" -->
 
 📝 2 个实例方法
@@ -153,7 +153,7 @@ Socket.IO 降级方案
 
 👇
 
-![api-eventListener](./img/api-eventListener.png)
+![api-eventListener](../img/api-eventListener.png)
 <!-- .element: style="width: 80%" -->
 
 📝 4 种监听事件
@@ -258,7 +258,7 @@ Sec-WebSocket-Protocol: chat
 
 👇
 
-![Sec-WebSocket-Key & Sec-WebSocket-Accept](./img/rfc-key&accept.png)
+![Sec-WebSocket-Key & Sec-WebSocket-Accept](../img/rfc-key&accept.png)
 
 <small>Sec-WebSocket-Key &nbsp; `<=>` &nbsp; Sec-WebSocket-Accept</small>
 
@@ -288,7 +288,7 @@ WebSocket客户端、服务端通信的最小单位是帧（frame），由1个�
 
 👇
 
-![rfc-data_frame](./img/rfc-data_frame.png)
+![rfc-data_frame](../img/rfc-data_frame.png)
 <!-- .element: style="width: 80%" -->
 
 📝 可变长 服务端的分帧开销是 2~10 Byte，客户端是则是 6~14 Byte
