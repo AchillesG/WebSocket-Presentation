@@ -7,12 +7,13 @@
 ### content strature
 
 ```
-├── img
+├── images
 ├── README.md
 ├── index.html
-└── presentation
-    ├── WebSocket.md // main content
-    └── js_code.js
+├── index.md // main content
+└── attach
+    ├── js_code.js //js code used in images
+    └── server.js // websocket echo server
 ```
 
 ### 本地编辑、展示

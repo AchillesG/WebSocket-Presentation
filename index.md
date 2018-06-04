@@ -72,7 +72,7 @@ Socket.IO 降级方案
 
 ## WebSocket 的特点
 
-![全双工通信(full-duplex)](../img/full-duplex.png "全双工通信(full-duplex)")
+![全双工通信(full-duplex)](./images/full-duplex.png "全双工通信(full-duplex)")
 <!-- .element: style="width:80%; background-color: #ddd; border: 4px solid #fff;" -->
 <small>全双工通信 (full-duplex)</small>
 
@@ -98,7 +98,7 @@ Socket.IO 降级方案
 
 👇
 
-[![overTCP](../img/overTCP.jpg)](#/3/1)
+[![overTCP](./images/overTCP.jpg)](#/3/1)
 
 👉
 
@@ -121,14 +121,14 @@ Socket.IO 降级方案
 [SockJS](https://github.com/sockjs/sockjs-client#supported-transports-by-browser-html-served-from-http-or-https),
 [Can I use](https://caniuse.com/#feat=websockets)
 
-![api-interface](../img/api-interface.png)
+![api-interface](./images/api-interface.png)
 <!-- .element: style="margin-top: -50px;" -->
 
 📝 interface: WebSocket 是与服务端连接的主接口，连接后也通过它进行数据的发送接收
 
 👇
 
-![api-property](../img/api-property.png)
+![api-property](./images/api-property.png)
 
 📝 WebSocket 实例的部分属性
 
@@ -140,7 +140,7 @@ Socket.IO 降级方案
 
 👇
 
-![api-method](../img/api-method.png)
+![api-method](./images/api-method.png)
 <!-- .element: style="width: 80%" -->
 
 📝 2 个实例方法
@@ -153,7 +153,7 @@ Socket.IO 降级方案
 
 👇
 
-![api-eventListener](../img/api-eventListener.png)
+![api-eventListener](./images/api-eventListener.png)
 <!-- .element: style="width: 80%" -->
 
 📝 4 种监听事件
@@ -258,7 +258,7 @@ Sec-WebSocket-Protocol: chat
 
 👇
 
-![Sec-WebSocket-Key & Sec-WebSocket-Accept](../img/rfc-key&accept.png)
+![Sec-WebSocket-Key & Sec-WebSocket-Accept](./images/rfc-key&accept.png)
 
 <small>Sec-WebSocket-Key &nbsp; `<=>` &nbsp; Sec-WebSocket-Accept</small>
 
@@ -288,7 +288,7 @@ WebSocket客户端、服务端通信的最小单位是帧（frame），由1个�
 
 👇
 
-![rfc-data_frame](../img/rfc-data_frame.png)
+![rfc-data_frame](./images/rfc-data_frame.png)
 <!-- .element: style="width: 80%" -->
 
 📝 可变长 服务端的分帧开销是 2~10 Byte，客户端是则是 6~14 Byte
@@ -298,11 +298,11 @@ WebSocket客户端、服务端通信的最小单位是帧（frame），由1个�
   - 0x0：标识一个延续帧
   - 0x1：标识一个text类型帧
   - 0x2：标识一个binary类型帧
-  - 0x3-7：保留-非控制帧
+  - 0x3-7：保留 - 非控制帧
   - 0x8：标识一个close类型帧
   - 0x9：标识一个ping类型帧
   - 0xA：表示一个pong类型帧
-  - 0xB-F：保留-控制帧
+  - 0xB-F：保留 - 控制帧
 - Mask：1 bit。表示 Payload 是否有掩码。客户端必须1，服务端必须0。
 - Payload length：7 bit, 7 + 16 bit, 7 + 64 bit。
   - 如果其值在0-125，则是 payload 的真实长度。
@@ -319,11 +319,11 @@ opcode：4 bit。表示被传输帧的类型
 - 0x0：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标识一个延续帧
 - 0x1：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标识一个 text 类型帧
 - 0x2：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标识一个 binary 类型帧
-- 0x3-7：&nbsp;保留-非控制帧
+- 0x3-7：&nbsp;保留 - 非控制帧
 - 0x8：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标识一个 close 类型帧
 - 0x9：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标识一个 ping 类型帧
 - 0xA：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;表示一个 pong 类型帧
-- 0xB-F：&nbsp;保留-控制帧
+- 0xB-F：&nbsp;保留 - 控制帧
 
 📝
 - 内容帧
