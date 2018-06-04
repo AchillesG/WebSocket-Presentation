@@ -1,6 +1,10 @@
 # A WebSocket Presentation
 
-## content strature
+[Watch Slides →](https://achillesg.github.io/WebSocket-Presentation/)
+
+![Watch Slides](./qrcode.png)
+
+### content strature
 
 ```
 ├── img
@@ -11,7 +15,7 @@
     └── js_code.js
 ```
 
-## 本地编辑、展示
+### 本地编辑、展示
 
 ``` js
 npm install
