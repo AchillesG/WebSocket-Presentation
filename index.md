@@ -185,7 +185,7 @@ WebSocket 在大部分语言都有实现,
 - Socket.IO 高可用，有完备的降级方案 node.js
 - ws 更为轻量化的库
 ---
-- 一般8核16G服务器 可维持50-100万级别的长连接（每分钟广播数据）
+- 一般8核16G服务器 可维持50-100万级别的长连接（每分钟广播数据）[via](http://colobu.com/2015/07/14/performance-comparison-of-7-websocket-frameworks/)
 
 - 浏览器端并发限制 chrome 设为 255，比常规 http 并发大很多。
 

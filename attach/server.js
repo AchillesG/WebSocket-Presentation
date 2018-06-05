@@ -33,7 +33,7 @@ wss.on('connection', function connection (ws) {
  * client code
  *
 
- const connectWebSocket = () => {
+const connectWebSocket = () => {
   var ws = new WebSocket('ws://localhost:9090')
   ws.onopen = e => {
     console.log('connection opend')
